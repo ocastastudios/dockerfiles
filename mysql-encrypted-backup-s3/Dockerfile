@@ -1,8 +1,6 @@
 FROM alpine:3.1
 MAINTAINER Martin Higham "martin@ocasta.co"
 
-RUN apk --update add openssl && rm -rf /var/cache/apk/*
-
 ADD install.sh install.sh
 RUN sh install.sh && rm install.sh
 
